@@ -1,0 +1,345 @@
+body {
+    background-color: #f2f2f2;
+}
+
+/* =============== INDEX =============== */
+.section-title {
+    color: #008B8B;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section-title-light {
+    color: #ffffff;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Bagian Carrousel */
+.half-height-carousel {
+    max-height: 50vh;
+}
+
+.carousel-img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-indicators {
+    top: 45vh;
+}
+
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    background-color: #008B8B;
+    border: 1px solid #008B8B;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #ffffff;
+}
+
+/* End Bagian Carrousel */
+/* Bagian Fitur */
+.feature-card {
+    margin-top: -20px;
+}
+
+.feature-card .col-3:not(:last-child) {
+    border-right: 1px solid #ccc;
+    padding-right: 15px;
+}
+
+.feature-icon {
+    font-size: 40px;
+    width: 45px;
+    margin-bottom: 10px;
+}
+
+/* End Bagian Fitur */
+/* Bagian Flash Sale */
+.flash-sale-section {
+    background-color: #008B8B;
+    padding: 20px;
+}
+
+.section-title-light {
+    font-size: 24px;
+}
+
+.flash-sale .card {
+    color: #008B8B;
+    border: none;
+    border-radius: 10px;
+}
+
+.flash-sale .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.flash-sale .card-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.card-see-all {
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+/* End Bagian Flash Sale */
+/* Bagian Produk */
+.product .card {
+    background-color: #008B8B;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.product-label {
+    border-radius: 7px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.product-cart {
+    background-color: #008B8B;
+    color: #ffffff;
+    border-radius: 7px;
+    text-align: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.product .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product .card-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.product .card-see-all {
+    height: 100%;
+    width: 100%;
+    color: #008B8B;
+    border-radius: 50%;
+}
+
+/* End Bagian Produk */
+/* Footer */
+.icon-box {
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    color: #008B8B;
+    background-color: white;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* =============== END INDEX =============== */
+/* =============== PRODUCT =============== */
+/* CSS untuk Kategori */
+.kategori-item {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.kategori-item a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.kategori-item a:hover {
+    background-color: #008B8B;
+}
+
+.kategori-item img {
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.kategori-nama {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Ganti warna teks saat dihover */
+.kategori-item a:hover .kategori-nama {
+    color: #fff;
+}
+
+.kategori-active {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.kategori-active a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #008B8B;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.kategori-active img {
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.kategori-active .kategori-nama {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* =============== END PRODUCT =============== */
+/* =============== PROFILE =============== */
+.box-pesanan {
+    text-decoration: none !important;
+    display: block;
+    color: #008B8B;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+}
+
+.box-pesanan:hover {
+    background-color: #008B8B;
+    color: white;
+}
+
+.box-pesanan-active {
+    background-color: #008B8B;
+    color: white;
+}
+
+.card-dropdown-custom .card-header {
+    cursor: pointer;
+    color: #008B8B;
+    background: white;
+    border-radius: 10px;
+    transition: .5s ease-in;
+}
+
+.card-dropdown-custom.open .card-header {
+    color: white;
+    background: #008B8B;
+    transition: .5s ease-out;
+    border-radius: 0;
+}
+
+.card-dropdown-custom .card-body {
+    display: none;
+    transition: display .5s ease-out;
+}
+
+.card-dropdown-custom.open .card-body {
+    display: block;
+    transition: display .5s ease-in-out;
+}
+
+.card-dropdown-custom .card-header .toggle-icon {
+    float: right;
+    font-weight: 900;
+    transition: transform .5s ease-in-out;
+}
+
+.card-dropdown-custom.open .card-header .toggle-icon {
+    transform: rotate(180deg);
+    transition: transform .5s ease-in-out;
+    /* Mengubah ikon ke arah bawah saat terbuka */
+}
+
+.fullscreen-map {
+    position: absolute;
+    bottom: 40px;
+    left: 28px;
+    z-index: 1000;
+}
+
+/* Gaya untuk tombol */
+.fullscreen-button {
+    padding: 11px 16px;
+    border: none;
+    background-color: #008B8B;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fullscreen-button:hover {
+    background-color: #006767;
+}
+
+/* =============== END PROFILE =============== */
+
+/* End Footer */
+@media (max-width: 767px) {
+    .carousel-img {
+        max-height: 200px;
+    }
+
+    .carousel-indicators {
+        top: 17vh;
+    }
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        background-color: #008B8B;
+        border: 1px solid #008B8B;
+        border-radius: 50%;
+    }
+
+    .feature-card {
+        margin-top: -60px;
+    }
+
+    .feature-icon {
+        font-size: 30px;
+        width: 40px;
+        margin-bottom: 10px;
+    }
+}
