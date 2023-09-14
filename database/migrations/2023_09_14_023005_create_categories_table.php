@@ -14,6 +14,7 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->string('category_image');
             $table->string('category_name');
             $table->enum('status', [GeneralStatus::STATUS_ACTIVE->value, GeneralStatus::STATUS_INACTIVE->value])->default(GeneralStatus::STATUS_ACTIVE->value);
             $table->timestamps();
