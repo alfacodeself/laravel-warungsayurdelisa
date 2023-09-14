@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('category_image');
             $table->string('category_name');
+            $table->string('slug')->unique();
             $table->enum('status', [GeneralStatus::STATUS_ACTIVE->value, GeneralStatus::STATUS_INACTIVE->value])->default(GeneralStatus::STATUS_ACTIVE->value);
             $table->timestamps();
         });
