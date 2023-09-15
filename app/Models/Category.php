@@ -19,6 +19,10 @@ class Category extends Model
         $slug = Str::slug($value) . '-' . Carbon::now()->format('Y-m-d-his') . '-' . rand(10000, 99999);
         $this->attributes['slug'] = $slug;
     }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     public function products(): HasMany
     {

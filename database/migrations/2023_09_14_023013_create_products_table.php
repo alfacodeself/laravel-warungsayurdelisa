@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('product_image');
             $table->string('product_name');
             $table->string('slug')->unique();
+            $table->boolean('is_new_product')->default(false);
             $table->enum('stock', [StockStatus::STOCK_EMPTY->value, StockStatus::STOCK_FEW->value, StockStatus::STOCK_MANY->value]);
             $table->enum('status', [GeneralStatus::STATUS_ACTIVE->value, GeneralStatus::STATUS_INACTIVE->value])->default(GeneralStatus::STATUS_ACTIVE->value);
             $table->timestamps();
