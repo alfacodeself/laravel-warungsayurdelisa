@@ -9,31 +9,28 @@ use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
-use ReflectionClass;
 
 class ByProductType
 {
-    protected $request;
+    // protected $request;
 
-    public function __construct(Request $request)
+    public function __construct(protected ProductType $productType = ProductType::ALL_PRODUCTS)
     {
-        $this->request = $request;
+        // $this->request = $request;
     }
 
     public function handle(Builder $builder, Closure $next)
     {
-        if ($this->request->has('product_type')) {
-            $productType = $this->request->product_type;
-            if (!ProductType::tryFrom($productType)) {
-                throw new Exception('Invalid product type', 419);
-            }
-
-            return $next($builder)->when($productType == 'new arrive', function ($products) {
-                return $products->where('is_new_product', true);
-            })->when($productType == 'discount', function ($products) {
-                return $products->discountProducts();
-            });
-        }
-        return $next($builder);
+        // if ($this->request->has('product_type')) {
+        //     $productType = $this->request->product_type;
+        //     if (!ProductType::tryFrom($productType)) {
+        //         throw new Exception('Invalid product type', 419);
+        //     }
+        // }
+        return $next($builder)->when($this->productType == ProductType::NEW_ARRIVE_PRODUCTS, function ($products) {
+            return $products->where('is_new_product', true);
+        })->when($this->productType == ProductType::DISCOUNT_PRODUCTS, function ($products) {
+            return $products->discountProducts();
+        });
     }
 }
