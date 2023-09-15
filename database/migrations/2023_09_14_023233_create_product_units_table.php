@@ -16,7 +16,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('product_id')->constrained('products')->cascadeOnDelete();
             $table->foreignId('unit_id')->constrained('units')->cascadeOnDelete();
-            $table->integer('price');
+            $table->integer('selling_price');
+            $table->integer('purchase_price');
             $table->enum('discount_type', [DiscountType::NO_DISCOUNT->value, DiscountType::FLAT->value, DiscountType::PERCENTAGE->value])->default(DiscountType::NO_DISCOUNT->value);
             $table->integer('discount_nominal')->nullable();
             $table->timestamps();

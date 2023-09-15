@@ -28,7 +28,7 @@ class Product extends Model
     {
         return $query->with([
             'product_units' => function ($query) {
-                $query->select('id', 'price', 'discount_type', 'discount_nominal', 'unit_id', 'product_id')->with('unit:id,unit_name');
+                $query->select('id', 'selling_price', 'discount_type', 'discount_nominal', 'unit_id', 'product_id')->with('unit:id,unit_name');
             }
         ])
             ->whereHas('product_units', function ($query) {

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #008B8B;">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="{{ route('home') }}" style="font-weight: 600">
+        <a class="navbar-brand" href="{{ route('landingpage.index') }}" style="font-weight: 600">
             <img src="{{ asset('assets/landingpage/img/logodelisa.png') }}" alt="Warung Sayur D'Lisa Logo" width="50">
             Warung Sayur D'Lisa
         </a>
@@ -21,7 +21,7 @@
                     </a>
                 </li>
                 <li class="nav-item d-flex">
-                    <a class="nav-link" style="font-size: 15px;  color: white; font-weight: 400" href="{{ route('login') }}">
+                    <a class="nav-link" style="font-size: 15px;  color: white; font-weight: 400" href="">
                         <i class="fas fa-user-circle" style="font-size: 16px; width: 25px;"></i> Login
                     </a>
                 </li>

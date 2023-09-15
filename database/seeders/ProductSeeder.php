@@ -46,10 +46,13 @@ class ProductSeeder extends Seeder
                         $discountNominal = null;
                         break;
                 }
+                $pruchase_price = rand(15, 120) * 1000;
+                $selling_price = $pruchase_price + rand(15, 100) * 1000;
                 ProductUnit::create([
                     'product_id' => $product->id,
                     'unit_id' => rand(1, 15),
-                    'price' => rand(15, 120) * 1000,
+                    'purchase_price' => $pruchase_price,
+                    'selling_price' => $selling_price,
                     'discount_type' => $discounType,
                     'discount_nominal' => $discountNominal,
                 ]);

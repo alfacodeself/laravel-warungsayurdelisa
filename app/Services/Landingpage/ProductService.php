@@ -5,6 +5,7 @@ namespace App\Services\Landingpage;
 use App\Enums\ProductType;
 use App\Filters\Products\ByCategory;
 use App\Filters\Products\ByProductType;
+use App\Http\Resources\Landingpage\ProductResource;
 use App\Models\Product;
 use Illuminate\Support\Facades\Pipeline;
 
@@ -16,13 +17,12 @@ class ProductService
         if ($category != null) {
             array_push($pipelines, ByCategory::class);
         }
-        return Pipeline::send(Product::query())
-            ->through($pipelines)
-            ->thenReturn()
-            ->paginate($paginate, ['*'], 'page', $page);
+        $products = Pipeline::send(Product::query())->through($pipelines)->thenReturn()->paginate($paginate, ['*'], 'page', $page);
+        $transformedProducts = $products->getCollection()->map(function ($product) {
+            $resource = new ProductResource($product, );
+            return $resource->toArray();
+        });
+        $products->setCollection($transformedProducts);
+        return $products;
     }
-
-    // public function query()
-    // {
-    // }
 }
